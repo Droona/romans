@@ -1,28 +1,7 @@
 # Roman Numerals
 
-##Summary
-
-We're going to write a method that converts an integer to its Roman numeral equivalent. In other words, if we give our method the Arabic number 476, our method will return the Roman numeral CDLXXVI.
-
-Determining how to take any number (e.g., 1, 58, 1948, etc.) and convert it into its Roman numeral equivalent is our main focus.  But, in solving this problem, we'll have the opportunity to practice developing with a test-first approach.  And, as always, we should pay attention to the quality of the code that we write.  Are we writing methods that do only one thing?  Is our code DRY—as in *don't repeat yourself*? Are we giving our variables descriptive names?  We need to be very deliberate with our code to make it as easy to read as possible; make intentional decisions.
-
-### Test-first Approach
-At Dev Bootcamp we take a test-driven approach to development.  Before we write code, we're going to write tests that will tell us if the code we do write is operating the way that we expect it to.  
 
 With this approach, we start simple.  The first test we have for converting an Arabic number to a Roman numeral is converting 1 to I.  Then we make things a little harder; we'll convert 4.  From there, maybe we'll move on to converting 5.  We'll continue with this step-by-step approach until we can convert any Arabic number to its Roman numeral equivalent.
-
-We'll be using RSpec for testing.  The files containing our tests will be located in the `spec/` directory.  For this challenge, we only have one test file:  `spec/roman_numerals_spec.rb`.
-
-To run our tests from the command line, we simply need to navigate to our application's root directory and run the `rspec` command.  This command will look for a `spec/` directory.  It will look at each of the files in the `spec/` directory and run any file whose filename ends in *_spec.rb*.
-
-### Refactoring
-Undoubtedly, as we code, we'll see opportunities to refactor.  Are we beginning to repeat ourselves?  Is there a bit of logic that could exist in its own method so that each method is responsible for only one thing?  When we refactor code, we can accidentally break already working code. How do we know if we break our code?  Our tests can help us.  We'll want to get into the habit of refactoring only when all of our tests are passing.  Passing tests tell us that our code works.  If our tests continue to pass during and after refactoring, we can be sure that we haven't broken anything.
-
-### Roman Numerals as Representation
-Has anyone ever seen a 5? Not a symbol we write on a piece of paper or print to a screen, but an actual, honest-to-goodness 5?  Of course not. You've seen things that somehow embody five: five apples, five fingers, five weekdays on the calendar, a scrap of paper with *5* written on it, and so forth.
-
-Think of all the ways to represent the integer 5.  Symbols like *5*, *five*, *V*, and *IIIII* all ways to represent 5. If we asked a three-year-old, they might hold up the five fingers on their hand or pull out five pennies from their pocket. Computers encode numbers their own way, as a sequence of 0s and 1s called [binary](http://en.wikipedia.org/wiki/Binary_number).  [The map is not the territory](http://en.wikipedia.org/wiki/Map%E2%80%93territory_relation), as they say.
-
 
 ##Releases
 
