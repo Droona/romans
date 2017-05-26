@@ -1,7 +1,6 @@
 def convert_to_roman(arabic_number)
 
   mWhole = arabic_number/1000
-  # puts mWhole
   dRemain = arabic_number%1000
 
   dWhole = dRemain/500
@@ -9,9 +8,8 @@ def convert_to_roman(arabic_number)
 
   cWhole = cRemain/100
   lRemain = arabic_number%100
-  # puts lRemain
+
   lWhole = lRemain/50
-  # puts lWhole
   xRemain = arabic_number%50
 
   xWhole = xRemain/10
