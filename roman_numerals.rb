@@ -1,17 +1,35 @@
 def convert_to_roman(arabic_number)
 
-  xWhole = arabic_number/10
+  mWhole = arabic_number/1000
+  # puts mWhole
+  dRemain = arabic_number%1000
+
+  dWhole = dRemain/500
+  cRemain = arabic_number%500
+
+  cWhole = cRemain/100
+  lRemain = arabic_number%100
+  # puts lRemain
+  lWhole = lRemain/50
+  # puts lWhole
+  xRemain = arabic_number%50
+
+  xWhole = xRemain/10
   vRemain = arabic_number%10
 
   vWhole = vRemain/5
   iRemain = arabic_number%5
 
+  mTotal = "M"*mWhole
+  dTotal = "D"*dWhole
+  cTotal = "C"*cWhole
+  lTotal = "L"*lWhole
   xTotal = "X"*xWhole
   vTotal = "V"*vWhole
   iTotal = "I"*iRemain
 
-  arabic_number = xTotal + vTotal + iTotal
+  arabic_number = mTotal + dTotal + cTotal + lTotal + xTotal + vTotal + iTotal
 
 end
 
-puts convert_to_roman(31)
+puts convert_to_roman(1533)
