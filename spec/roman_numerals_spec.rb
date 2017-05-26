@@ -12,6 +12,9 @@ describe 'converting an Arabic number to a Roman numeral' do
 
     # Release 1 ...
     # add tests for old roman numerals here
+    it 'converts 1533 to MDXXXIII' do
+      expect(convert_to_roman(1533)).to eq "MDXXXIII"
+    end
 
   end
 
