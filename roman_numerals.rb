@@ -1,33 +1,15 @@
 def convert_to_roman(arabic_number)
 
-  mWhole = arabic_number/1000
-  dRemain = arabic_number%1000
+roman_num = { 1000=> "M", 900=> "CM", 500=> "D", 400=> "CD", 100=> "C", 90=> "XC", 50=> "L", 40 =>"XL", 10=> "X", 9=>"IX", 5=> "V", 4=>"IV", 1=> "I" }
+temp_string = ""
 
-  dWhole = dRemain/500
-  cRemain = arabic_number%500
-
-  cWhole = cRemain/100
-  lRemain = arabic_number%100
-
-  lWhole = lRemain/50
-  xRemain = arabic_number%50
-
-  xWhole = xRemain/10
-  vRemain = arabic_number%10
-
-  vWhole = vRemain/5
-  iRemain = arabic_number%5
-
-  mTotal = "M"*mWhole
-  dTotal = "D"*dWhole
-  cTotal = "C"*cWhole
-  lTotal = "L"*lWhole
-  xTotal = "X"*xWhole
-  vTotal = "V"*vWhole
-  iTotal = "I"*iRemain
-
-  arabic_number = mTotal + dTotal + cTotal + lTotal + xTotal + vTotal + iTotal
-
+roman_num.each do |arabic, roman|
+  if arabic_number >= arabic
+    temp_string += roman * (arabic_number/arabic)
+    arabic_number -= arabic * (arabic_number/arabic)
+    end
+  end
+  puts temp_string
 end
 
-puts convert_to_roman(1533)
+convert_to_roman(949)
